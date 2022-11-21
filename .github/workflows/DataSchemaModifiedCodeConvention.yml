@@ -12,4 +12,4 @@ jobs:
       - name: Start SQL Linter
         run: |
           pip install sqlfluff
-          sqlfluff lint $GITHUB_WORKSPACE/DataSchema.sql --dialect postgres --exclude-rules L039,L016,L014,L009
+          sqlfluff lint $GITHUB_WORKSPACE/DataSchema.sql --dialect postgres --exclude-rules L039,L016,L014,L009,L004,L010
