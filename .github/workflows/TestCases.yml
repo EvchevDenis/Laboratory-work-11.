@@ -10,7 +10,14 @@ jobs:
       - name: Checkout
         uses: "actions/checkout@v3"
       
-      - name: Compile & Execute
+      - name: Compile
         run: |
           cd $GITHUB_WORKSPACE/
-          java TestCases.java
+          export CLASSPATH="./ojdbc8.jar:./"
+          javac TestCases.java
+      
+      - name: Execute
+        run: |
+          cd $GITHUB_WORKSPACE/
+          export CLASSPATH="./ojdbc8.jar:./"
+          java TestCases ${{secrets.LOGIN}} ${{secrets.PASSWORD}}
