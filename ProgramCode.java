@@ -1,4 +1,4 @@
-package com.nuop.mobileProject.model.User;
+package com.denis.mobileProject.model.User;
 
 import java.util.List;
 
