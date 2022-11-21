@@ -1,9 +1,5 @@
 /**
 * Package info.
-*
-* @since 1.0
-* @author denis
-* @version 1.1
 */
 package com.denis.mobileProject;
 
