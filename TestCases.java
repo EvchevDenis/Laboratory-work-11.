@@ -1,6 +1,6 @@
 package com.Tests;
 
-public class findByCompTest {
+class findByCompTest {
     public static String firstNChars(String str, int n) {
         if (str == null) {
             return null;
