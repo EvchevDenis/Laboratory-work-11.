@@ -1,7 +1,11 @@
 /**
 * Package info.
+*
+* @since 1.0
+* @author denis
+* @version 1.1
 */
-package com.nuop.mobileProject;
+package com.denis.mobileProject;
 
 import java.util.List;
 
@@ -28,7 +32,7 @@ public class UserSettings {
 
   /**
   * public createUser method.
-  * 
+  *
   * @param userForm user form
   * @return user
   */
@@ -56,7 +60,7 @@ public class UserSettings {
 
   /**
   * public getAllUsers method.
-  * 
+  *
   * @return all users
   */
   public List<User> getAllUsers() {
