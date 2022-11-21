@@ -1,7 +1,7 @@
 /**
-* Package info
+* Package info.
 */
-package com.nuop.mobileProject.model.User;
+package com.nuop.mobileProject;
 
 import java.util.List;
 
@@ -11,13 +11,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserSettings {
 
-  /**
-  * userRepository
+ /**
+  * userRepository.
   */
   private final UserRepository userRepository;
 
   /**
-  * public UserSettings method
+  * public UserSettings method.
+  *
+  * @param repository user repository
   */
   @Autowired
   public final UserSettings(final UserRepository repository) {
@@ -25,7 +27,10 @@ public class UserSettings {
   }
 
   /**
-  * public createUser method
+  * public createUser method.
+  * 
+  * @param userForm user form
+  * @return user
   */
   public final User createUser(final UserForm userForm) {
 
@@ -40,14 +45,19 @@ public class UserSettings {
   }
 
   /**
-  * public saveUser method
+  * public saveUser method.
+  *
+  * @param user program user
+  * @return saving user
   */
   public User saveUser(final User user) {
     return userRepository.save(user);
   }
 
   /**
-  * public getAllUsers method
+  * public getAllUsers method.
+  * 
+  * @return all users
   */
   public List<User> getAllUsers() {
     return userRepository.findAll();
