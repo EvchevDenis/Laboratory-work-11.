@@ -5,6 +5,7 @@ on:
 jobs:
   SqlLinter:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Code in Repo
         uses: "actions/checkout@v3"
