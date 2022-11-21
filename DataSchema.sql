@@ -1,23 +1,9 @@
-drop table users CASCADE;
-drop table active_competitions CASCADE;
-drop table sponsor CASCADE;
-drop table viewer CASCADE;
-drop table sportsman CASCADE;
-drop table completed_competitions CASCADE;
-drop table sport_types CASCADE;
-drop table sportsman_sponsor CASCADE;
-drop table actcomp_sponsor CASCADE;
-drop table actcomp_sprtypes CASCADE;
-drop table actcomp_sportsman CASCADE;
-drop table comlcomp_sportsman CASCADE;
-drop table comlcomp_sprtypes CASCADE;
-
 CREATE TABLE users(
 	account_type VARCHAR check (account_type IN ('Глядач', 'Спортсмен', 'Спонсор')),
 	user_name VARCHAR(50),
 	surname VARCHAR(50),
 	balance DECIMAL(10, 2) check (balance >= 0),
-	preferred_sport VARCHAR(50)
+	preferred_sport VARCHAR(50),
 	mobile VARCHAR(50) CHECK(mobile ~* '^\+?3?8?(0[\s\.-]\d{2}[\s\.-]\d{3}[\s\.-]\d{2}[\s\.-]\d{2})$'),
 	email VARCHAR(50) CHECK(email ~* '^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
 );
